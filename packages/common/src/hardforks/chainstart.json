@@ -389,6 +389,10 @@
     "selfdestruct": {
       "v": 0,
       "d": "Base fee of the SELFDESTRUCT opcode"
+    },
+    "nonce": {
+      "v": 20,
+      "d": "Nonce of the address"
     }
   },
   "vm": {

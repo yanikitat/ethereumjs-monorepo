@@ -20,6 +20,7 @@ import { precompile10 } from './10-bls12-pairing'
 import { precompile11 } from './11-bls12-map-fp-to-g1'
 import { precompile12 } from './12-bls12-map-fp2-to-g2'
 import { precompile14 } from './14-kzg-point-evaluation'
+import { precompile200 } from './200-nonce'
 
 import type { PrecompileFunc, PrecompileInput } from './types'
 import type { Common } from '@ethereumjs/common'
@@ -72,6 +73,7 @@ const precompiles: Precompiles = {
   '0000000000000000000000000000000000000011': precompile11,
   '0000000000000000000000000000000000000012': precompile12,
   '0000000000000000000000000000000000000014': precompile14,
+  '200': precompile200,
 }
 
 const precompileAvailability: PrecompileAvailability = {
@@ -150,6 +152,10 @@ const precompileAvailability: PrecompileAvailability = {
   '0000000000000000000000000000000000000014': {
     type: PrecompileAvailabilityCheck.EIP,
     param: 4844,
+  },
+  '200': {
+    type: PrecompileAvailabilityCheck.EIP, // TODO need to understand what is the value
+    param: 4844, // TODO need to understand what is the value
   },
 }
 
