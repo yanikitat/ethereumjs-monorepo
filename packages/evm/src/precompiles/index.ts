@@ -154,8 +154,8 @@ const precompileAvailability: PrecompileAvailability = {
     param: 4844,
   },
   '200': {
-    type: PrecompileAvailabilityCheck.EIP, // TODO need to understand what is the value
-    param: 4844, // TODO need to understand what is the value
+    type: PrecompileAvailabilityCheck.Hardfork,
+    param: Hardfork.Chainstart,
   },
 }
 
