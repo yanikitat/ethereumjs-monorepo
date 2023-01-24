@@ -11,7 +11,7 @@ tape('Precompiles: nonce', (t) => {
     const common = new Common({ chain: Chain.Mainnet, hardfork: Hardfork.Petersburg })
     const eei = await getEEI()
     const evm = await EVM.create({ common, eei })
-    const nonceContractAddress = '0000000000000000000000000000000000000200'
+    const nonceContractAddress = '00000000000000000000000000000000000000c8'
     const nonce = getActivePrecompiles(common).get(nonceContractAddress)!
 
     const nonceValue = BigInt(12)
