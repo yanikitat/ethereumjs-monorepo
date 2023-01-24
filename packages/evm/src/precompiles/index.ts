@@ -73,7 +73,7 @@ const precompiles: Precompiles = {
   '0000000000000000000000000000000000000011': precompile11,
   '0000000000000000000000000000000000000012': precompile12,
   '0000000000000000000000000000000000000014': precompile14,
-  '200': precompile200,
+  '0000000000000000000000000000000000000200': precompile200,
 }
 
 const precompileAvailability: PrecompileAvailability = {
@@ -153,7 +153,7 @@ const precompileAvailability: PrecompileAvailability = {
     type: PrecompileAvailabilityCheck.EIP,
     param: 4844,
   },
-  '200': {
+  '0000000000000000000000000000000000000200': {
     type: PrecompileAvailabilityCheck.Hardfork,
     param: Hardfork.Chainstart,
   },

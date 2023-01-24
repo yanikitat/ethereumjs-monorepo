@@ -1,4 +1,5 @@
-import { Address, toBuffer } from '@ethereumjs/util'
+import { Address } from '@ethereumjs/util'
+import { Buffer } from 'buffer'
 
 import { OOGResult } from '../evm'
 
@@ -15,8 +16,11 @@ export async function precompile200(opts: PrecompileInput): Promise<ExecResult> 
   }
   const account = await opts._EVM.eei.getAccount(new Address(data))
 
+  const returnValue = Buffer.alloc(8)
+  returnValue.writeBigInt64BE(account.nonce)
+
   return {
     executionGasUsed: gasUsed,
-    returnValue: toBuffer(account.nonce),
+    returnValue,
   }
 }
